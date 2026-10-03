@@ -1,0 +1,28 @@
+actors:
+
+  user_a:
+    headers:
+      Authorization: "Bearer TOKEN_A"
+    owned_objects:
+      orders: "1001"
+    identity_markers:
+      - "alice@example.com"
+      - "user_a"
+      - "alice"
+
+  user_b:
+    headers:
+      Authorization: "Bearer TOKEN_B"
+    owned_objects:
+      orders: "2001"
+    identity_markers:
+      - "bob@example.com"
+      - "user_b"
+      - "bob"
+
+  admin:
+    headers:
+      Authorization: "Bearer ADMIN_TOKEN"
+    identity_markers:
+      - "admin@example.com"
+      - "admin"
