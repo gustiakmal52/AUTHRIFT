@@ -1,0 +1,38 @@
+GET /api/vulnerable/orders/1001 HTTP/1.1
+Host: 127.0.0.1:9777
+Authorization: Bearer TOKEN_A
+Accept: application/json
+###
+GET /api/secure/orders/1001 HTTP/1.1
+Host: 127.0.0.1:9777
+Authorization: Bearer TOKEN_A
+Accept: application/json
+###
+GET /api/profile HTTP/1.1
+Host: 127.0.0.1:9777
+Authorization: Bearer TOKEN_A
+Accept: application/json
+###
+GET /api/leaky/profile HTTP/1.1
+Host: 127.0.0.1:9777
+Authorization: Bearer TOKEN_A
+Accept: application/json
+###
+POST /api/orders HTTP/1.1
+Host: 127.0.0.1:9777
+Authorization: Bearer TOKEN_A
+Accept: application/json
+Content-Type: application/json
+
+{"item": "Widget D"}
+###
+POST /api/admin/users HTTP/1.1
+Host: 127.0.0.1:9777
+Authorization: Bearer ADMIN_TOKEN
+Accept: application/json
+###
+POST /api/vulnerable/admin/users HTTP/1.1
+Host: 127.0.0.1:9777
+Authorization: Bearer ADMIN_TOKEN
+Accept: application/json
+
